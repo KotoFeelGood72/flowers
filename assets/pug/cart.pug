@@ -1,0 +1,122 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Cart of the page'}
+block content_block
+	section.cart
+		.section_in
+			.cart_head 
+				ul.cart_head--list
+					-
+						var cartHead = [
+							{
+								title: 'Корзина',
+								num: '1',
+							},
+							{
+								title: 'оформление заказа',
+								num: '2',
+							},
+							{
+								title: 'оплата',
+								num: '3',
+							},
+						]
+					each item in cartHead
+						li
+							p=item.title 
+							.cart_head--num 
+								span=item.num
+			.cart_step--1 
+				ul.cart_product--list 
+					- 
+						var cartList = [
+							{
+								title: 'Букет “Великолепие”',
+								img: 'about',
+								width: '40 см * 40см ',
+								price: '3 800',
+							},
+						]
+					each item in cartList
+						li.cart_list--item 
+							.cart-item--img
+								img(src=`i/${item.img}.jpg`)
+							.cart_item--info 
+								h3=item.title 
+								.cart_item--width 
+									span Размер:
+									p=item.width
+							.cart_item--del 
+								a(href="#")
+									+icon('delete')
+							.cart_item--qty 
+								.cart_qty--btn 
+									+icon('minus')
+								.cart_qty--input 
+									input(type="number" value="1")
+								.cart_qty--btn 
+									+icon('plus')
+							.cart_item--price 
+								p=item.price
+				.cart_form--w
+					.cart_form
+						.cart_form--field 
+							ul.cart_form--check 
+								-
+									var cartCheck = [
+										{
+											title: 'Добавить открытку - бесплатно!',
+											icon: 'cart'
+										},
+										{
+											title: 'Фото букета до доставки - бесплатно!',
+											icon: 'photo'
+										},
+									]
+								each item in cartCheck 
+									li 
+										input(type="checkbox", name=item.title id=item.icon)
+										label(for=item.icon)
+											.cart_check--img 
+												+icon(item.icon)
+											p=item.title
+							.cart_form--happy 
+								label(for="happy") Текст поздравления
+								.cart_input--happy
+									textarea(id="happy" placeholder="Введите текст открытки")
+						ul.cart_form--total
+							-
+								var cartTotal = [
+									{
+										title: 'Итого по позициям:',
+										txt: '3 800',
+									},
+									{
+										title: 'Доставка г. Ростов-на-дону',
+										txt: 'бесплатно',
+									},
+									{
+										title: 'Итого:',
+										txt: '3 800',
+									},
+								]
+							each item in cartTotal
+								li 
+									span=item.title 
+									p=item.txt
+				+productsGrid({
+					btn: 'Оформить заказ',
+					classes: 'cart_product--crossel',
+					class: 'cart_crossel--btn',
+					icons: 'plus',
+					title: 'Добавьте к букету',
+					back: 'Вернуться к покупкам',
+					classBack: 'cart_product--back',
+					cartNote: 'Оформляя заказ вы соглашаетесь с условиями оферты и политики конфиденциальности',
+				})
+			.cart_step--2 
+				
+
+
+

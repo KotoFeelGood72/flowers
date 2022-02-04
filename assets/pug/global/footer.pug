@@ -1,0 +1,37 @@
+footer.footer
+	.section_in 
+		.footer_main 
+			.footer_col 
+				.footer_col--title
+					h6 Информация
+				ul.footer_col--list
+					each item in ['ИП Тертышникова С.А.', 'ИНН 610204789594', 'ОГРН 317619600233055']
+						li=item
+			.footer_col 
+				.footer_col--title 
+					h6 Меню
+				ul.footer_col--list
+					each item in ['Главная', 'Оформление свадеб', 'Оплата и доставка', 'Контакты']
+						li 
+							a(href="#")=item 
+			.footer_col 
+				.footer_col--title 
+					h6 Контакты
+					ul.footer_col--list
+						li 
+							a(href="#")
+								.footer_item--img 
+									+icon('map')
+								p г.Ростов-на-Дону, Еременко 77А
+						li 
+							a(href="#")
+								.footer_item--img 
+									+icon('tel')
+								p +7 989 511-12-14
+						li 
+							a(href="#")
+								+icon('inst')
+							a(href="#")
+								+icon('whatsapp')  
+
+				

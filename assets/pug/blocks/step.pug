@@ -1,0 +1,34 @@
+section.step 
+  .section_in 
+    ul.step_list
+      -
+        var step = [
+          {
+            img: 'step_1',
+            title: 'Бесплатная доставка',
+            txt: 'по городу, от 2-х часов'
+          },
+          {
+            img: 'step_2',
+            title: 'Только свежие цветы',
+            txt: 'высочайший контроль'
+          },
+          {
+            img: 'step_3',
+            title: 'Бесплатная открытка',
+            txt: 'к каждому букету'
+          },
+          {
+            img: 'step_4',
+            title: 'Культурные курьеры',
+            txt: 'сервис до самой двери'
+          },
+        ] 
+      each item in step
+        li 
+          .step_item--icon 
+            img(src=`i/vector/${item.img}.svg`)
+          .step_item--title 
+            p=item.title 
+          .step_item--desc 
+            p=item.txt

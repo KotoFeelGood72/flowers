@@ -1,0 +1,88 @@
+mixin products(data)
+	section.products 
+		.section_in 
+			.products_main 
+				h2=data.title
+				.products_slider.swiper-container 
+					.swiper-wrapper 
+						- for(i = 0; i < 4; ++i)
+							.swiper-slide
+								.products_item
+									.products_item--img 
+										img(src="i/products.jpg")
+									.prodcts_item--info
+										.products_item--title 
+											h3 Букет “Великолепие”
+										.products_item--price 
+											p 3 800
+									.products_item--action 
+										.products_item--link 
+											a(href="#") Заказать
+										.products_item--like 
+											+icon('like')
+					.products_nav 
+						.products_nav--btn.prev 
+							+icon('prev')
+						.products_pug 
+						.products_nav--btn.next 
+							+icon('next')
+
+mixin productsGrid(data)
+	section.products_grid 
+		.section_in 
+			.products_grid--main
+				if data.title 
+					h2=data.title 
+				else 
+
+				ul.products_grid(class=data.classes)
+					- for(i = 0; i < 4; ++i)
+						.products_item
+							.products_item--img 
+								img(src="i/products.jpg")
+							.prodcts_item--info
+								.products_item--title 
+									h3 Букет “Великолепие”
+								.products_item--price 
+									p 3 800
+							.products_item--action 
+								.products_item--link
+									if data.icons
+										a(href="#")
+											+icon(data.icons)
+											p Добавить
+									else 
+										a(href="#") Заказать 
+								.products_item--like 
+									+icon('like')
+				if data
+					.products_btn--more
+						a(href="#" class=data.class)=data.btn
+				if data.back 
+					.products_btn--back 
+						a(href="#" class=data.classBack)=data.back
+				if data.cartNote 
+					p=data.cartNote
+				else
+
+
+
+
+
+
+
+mixin bread(items, last)
+	section.bread 
+		.section_in 
+			.bread_main 
+				ul.bread_list 
+					each item in items
+						li 
+							if (items.length === 1)
+								a(href="#")=item
+							else
+								a(href="#")=item
+					if last
+						li.breadcrumb__item
+							p=last
+					else

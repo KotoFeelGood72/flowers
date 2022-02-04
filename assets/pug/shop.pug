@@ -1,0 +1,17 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Shop of the page'}
+block content_block
+	+bread(['Главная'], 'Каталог')
+	.all_title
+		.section_in
+			h1 ДОСТАВКА ЦВЕТОВ В РОСТОВЕ-НА-ДОНУ
+	include global/filter
+	.all_note--txt 
+		.section_in 
+			p Воспользуйтесь фильтрами, чтобы быстро найти и купить в Ростове-на-дону подходящие по случаю цветы.
+	+productsGrid({
+		btn: 'Показать еще',
+	})
+	include global/manual

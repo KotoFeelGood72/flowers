@@ -1,0 +1,28 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Home of the page'}
+block content_block
+	include blocks/hero
+	include global/filter
+	+products({
+		title: 'Хит продаж'
+	})
+	+products({
+		title: 'Новинки'
+	})
+	+products({
+		title: 'WOW'
+	})
+	+products({
+		title: 'НОВОГОДНИЕ ПОДАРКИ'
+	})
+	+products({
+		title: 'ИГРУШКИ'
+	})
+	+products({
+		title: 'ШАРЫ'
+	})
+	include blocks/about
+	include blocks/step
+	include blocks/reviews

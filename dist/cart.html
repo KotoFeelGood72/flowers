@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Cart of the page</title>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" media="all" href="styles/main_global.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="section_in"> 
+        <div class="header_top"> 
+          <ul class="header_top--list"> 
+            <li> <a href="#">Главная</a></li>
+            <li> <a href="#">Каталог</a></li>
+            <li> <a href="#">Оформление свадеб</a></li>
+            <li> <a href="#">Оплата и доставка</a></li>
+            <li> <a href="#">Контакты</a></li>
+          </ul>
+          <ul class="header_user--list"> 
+            <li> <a href="#">Войти</a></li>
+            <li> <a href="#">Зарегистрироваться</a></li>
+          </ul>
+        </div>
+        <div class="header_main"> 
+          <div class="header_logo"> <img src="i/vector/logo.svg"></div>
+          <div class="header_txt"> 
+            <p>Город доставки Ростов-на-дону</p>
+          </div>
+          <div class="header_search"> 
+            <input type="search" placeholder="Поиск">
+            <div class="header_search--btn"> 
+              <input type="button"><img src="i/vector/search.svg">
+            </div>
+          </div>
+          <div class="header_shop--list"> 
+            <li> <a href="#"><img src="i/vector/like.svg"></a></li>
+            <li> <a href="#"><img src="i/vector/cart.svg"></a></li>
+          </div>
+        </div>
+        <div class="header_bottom"> 
+          <ul class="header_nav--list"> 
+            <li> <a href="#">Классический</a></li>
+            <li> <a href="#">Авторский</a></li>
+            <li> <a href="#">Коробки</a></li>
+            <li> <a href="#">Корзина</a></li>
+            <li> <a href="#">Шары</a></li>
+            <li> <a href="#">Сухоцветы</a></li>
+            <li> <a href="#">Свадебные букеты</a></li>
+            <li> <a href="#">Красные розы</a></li>
+            <li> <a href="#">WOW</a></li>
+            <li> <a href="#">Игрушки</a></li>
+            <li> <a href="#">Новогодние подарки</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="base">
+        <section class="cart">
+          <div class="section_in">
+            <div class="cart_head"> 
+              <ul class="cart_head--list">
+                <li>
+                  <p>Корзина</p>
+                  <div class="cart_head--num"> <span>1</span></div>
+                </li>
+                <li>
+                  <p>оформление заказа</p>
+                  <div class="cart_head--num"> <span>2</span></div>
+                </li>
+                <li>
+                  <p>оплата</p>
+                  <div class="cart_head--num"> <span>3</span></div>
+                </li>
+              </ul>
+            </div>
+            <div class="cart_step--1"> 
+              <ul class="cart_product--list"> 
+                <li class="cart_list--item"> 
+                  <div class="cart-item--img"><img src="i/about.jpg"></div>
+                  <div class="cart_item--info"> 
+                    <h3>Букет “Великолепие”</h3>
+                    <div class="cart_item--width"> <span>Размер:</span>
+                      <p>40 см * 40см </p>
+                    </div>
+                  </div>
+                  <div class="cart_item--del"> <a href="#">
+                      <svg class="icon icon-delete ">
+                        <use xlink:href="i/sprite/sprite.svg#delete"></use>
+                      </svg></a></div>
+                  <div class="cart_item--qty"> 
+                    <div class="cart_qty--btn"> 
+                      <svg class="icon icon-minus ">
+                        <use xlink:href="i/sprite/sprite.svg#minus"></use>
+                      </svg>
+                    </div>
+                    <div class="cart_qty--input"> 
+                      <input type="number" value="1">
+                    </div>
+                    <div class="cart_qty--btn"> 
+                      <svg class="icon icon-plus ">
+                        <use xlink:href="i/sprite/sprite.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart_item--price"> 
+                    <p>3 800</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="cart_form--w">
+                <div class="cart_form">
+                  <div class="cart_form--field"> 
+                    <ul class="cart_form--check"> 
+                      <li> 
+                        <input type="checkbox" name="Добавить открытку - бесплатно!" id="cart">
+                        <label for="cart">
+                          <div class="cart_check--img"> 
+                            <svg class="icon icon-cart ">
+                              <use xlink:href="i/sprite/sprite.svg#cart"></use>
+                            </svg>
+                          </div>
+                          <p>Добавить открытку - бесплатно!</p>
+                        </label>
+                      </li>
+                      <li> 
+                        <input type="checkbox" name="Фото букета до доставки - бесплатно!" id="photo">
+                        <label for="photo">
+                          <div class="cart_check--img"> 
+                            <svg class="icon icon-photo ">
+                              <use xlink:href="i/sprite/sprite.svg#photo"></use>
+                            </svg>
+                          </div>
+                          <p>Фото букета до доставки - бесплатно!</p>
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="cart_form--happy"> 
+                      <label for="happy">Текст поздравления</label>
+                      <div class="cart_input--happy">
+                        <textarea id="happy" placeholder="Введите текст открытки"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="cart_form--total">
+                    <li> <span>Итого по позициям:</span>
+                      <p>3 800</p>
+                    </li>
+                    <li> <span>Доставка г. Ростов-на-дону</span>
+                      <p>бесплатно</p>
+                    </li>
+                    <li> <span>Итого:</span>
+                      <p>3 800</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <section class="products_grid"> 
+                <div class="section_in"> 
+                  <div class="products_grid--main">
+                    <h2>Добавьте к букету</h2>
+                    <ul class="products_grid cart_product--crossel">
+                      <div class="products_item">
+                        <div class="products_item--img"> <img src="i/products.jpg"/></div>
+                        <div class="prodcts_item--info">
+                          <div class="products_item--title"> 
+                            <h3>Букет “Великолепие”</h3>
+                          </div>
+                          <div class="products_item--price"> 
+                            <p>3 800</p>
+                          </div>
+                        </div>
+                        <div class="products_item--action"> 
+                          <div class="products_item--link"><a href="#">
+                              <svg class="icon icon-plus ">
+                                <use xlink:href="i/sprite/sprite.svg#plus"></use>
+                              </svg>
+                              <p>Добавить</p></a>
+                          </div>
+                          <div class="products_item--like"> 
+                            <svg class="icon icon-like ">
+                              <use xlink:href="i/sprite/sprite.svg#like"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="products_item">
+                        <div class="products_item--img"> <img src="i/products.jpg"/></div>
+                        <div class="prodcts_item--info">
+                          <div class="products_item--title"> 
+                            <h3>Букет “Великолепие”</h3>
+                          </div>
+                          <div class="products_item--price"> 
+                            <p>3 800</p>
+                          </div>
+                        </div>
+                        <div class="products_item--action"> 
+                          <div class="products_item--link"><a href="#">
+                              <svg class="icon icon-plus ">
+                                <use xlink:href="i/sprite/sprite.svg#plus"></use>
+                              </svg>
+                              <p>Добавить</p></a>
+                          </div>
+                          <div class="products_item--like"> 
+                            <svg class="icon icon-like ">
+                              <use xlink:href="i/sprite/sprite.svg#like"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="products_item">
+                        <div class="products_item--img"> <img src="i/products.jpg"/></div>
+                        <div class="prodcts_item--info">
+                          <div class="products_item--title"> 
+                            <h3>Букет “Великолепие”</h3>
+                          </div>
+                          <div class="products_item--price"> 
+                            <p>3 800</p>
+                          </div>
+                        </div>
+                        <div class="products_item--action"> 
+                          <div class="products_item--link"><a href="#">
+                              <svg class="icon icon-plus ">
+                                <use xlink:href="i/sprite/sprite.svg#plus"></use>
+                              </svg>
+                              <p>Добавить</p></a>
+                          </div>
+                          <div class="products_item--like"> 
+                            <svg class="icon icon-like ">
+                              <use xlink:href="i/sprite/sprite.svg#like"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="products_item">
+                        <div class="products_item--img"> <img src="i/products.jpg"/></div>
+                        <div class="prodcts_item--info">
+                          <div class="products_item--title"> 
+                            <h3>Букет “Великолепие”</h3>
+                          </div>
+                          <div class="products_item--price"> 
+                            <p>3 800</p>
+                          </div>
+                        </div>
+                        <div class="products_item--action"> 
+                          <div class="products_item--link"><a href="#">
+                              <svg class="icon icon-plus ">
+                                <use xlink:href="i/sprite/sprite.svg#plus"></use>
+                              </svg>
+                              <p>Добавить</p></a>
+                          </div>
+                          <div class="products_item--like"> 
+                            <svg class="icon icon-like ">
+                              <use xlink:href="i/sprite/sprite.svg#like"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
+                    <div class="products_btn--more"><a class="cart_crossel--btn" href="#">Оформить заказ</a></div>
+                    <div class="products_btn--back"> <a class="cart_product--back" href="#">Вернуться к покупкам</a></div>
+                    <p>Оформляя заказ вы соглашаетесь с условиями оферты и политики конфиденциальности</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="cart_step--2"> </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="section_in"> 
+          <div class="footer_main"> 
+            <div class="footer_col"> 
+              <div class="footer_col--title">
+                <h6>Информация</h6>
+              </div>
+              <ul class="footer_col--list">
+                <li>ИП Тертышникова С.А.</li>
+                <li>ИНН 610204789594</li>
+                <li>ОГРН 317619600233055</li>
+              </ul>
+            </div>
+            <div class="footer_col"> 
+              <div class="footer_col--title"> 
+                <h6>Меню</h6>
+              </div>
+              <ul class="footer_col--list">
+                <li> <a href="#">Главная</a></li>
+                <li> <a href="#">Оформление свадеб</a></li>
+                <li> <a href="#">Оплата и доставка</a></li>
+                <li> <a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer_col"> 
+              <div class="footer_col--title"> 
+                <h6>Контакты</h6>
+                <ul class="footer_col--list">
+                  <li> <a href="#">
+                      <div class="footer_item--img"> 
+                        <svg class="icon icon-map ">
+                          <use xlink:href="i/sprite/sprite.svg#map"></use>
+                        </svg>
+                      </div>
+                      <p>г.Ростов-на-Дону, Еременко 77А</p></a></li>
+                  <li> <a href="#">
+                      <div class="footer_item--img"> 
+                        <svg class="icon icon-tel ">
+                          <use xlink:href="i/sprite/sprite.svg#tel"></use>
+                        </svg>
+                      </div>
+                      <p>+7 989 511-12-14</p></a></li>
+                  <li> <a href="#">
+                      <svg class="icon icon-inst ">
+                        <use xlink:href="i/sprite/sprite.svg#inst"></use>
+                      </svg></a><a href="#">
+                      <svg class="icon icon-whatsapp ">
+                        <use xlink:href="i/sprite/sprite.svg#whatsapp"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="//cdn.glivera-team.com/gsap/gsap.min.js"></script>
+    <script>window.TweenMax || document.write('<script src="js/gsap.min.js"><\/script>')</script>
+    <script type="text/javascript">window.productionStatus = 'development';</script>
+    <script src="//cdn.glivera-team.com/dev_functions.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

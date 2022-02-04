@@ -1,0 +1,31 @@
+header.header
+	.section_in 
+		.header_top 
+			ul.header_top--list 
+				each item in ['Главная', 'Каталог', 'Оформление свадеб', 'Оплата и доставка', 'Контакты']
+					li 
+						a(href="#")=item 
+			ul.header_user--list 
+				each item in ['Войти', 'Зарегистрироваться']
+					li 
+						a(href="#")=item 
+		.header_main 
+			.header_logo 
+				img(src="i/vector/logo.svg")
+			.header_txt 
+				p Город доставки Ростов-на-дону
+			.header_search 
+				input(type="search" placeholder="Поиск")
+				.header_search--btn 
+					input(type="button")
+					img(src="i/vector/search.svg")
+			.header_shop--list 
+				each item in ['like', 'cart']
+					li 
+						a(href="#")
+							img(src=`i/vector/${item}.svg`) 
+		.header_bottom 
+			ul.header_nav--list 
+				each item in ['Классический', 'Авторский', 'Коробки', 'Корзина', 'Шары', 'Сухоцветы', 'Свадебные букеты', 'Красные розы', 'WOW', 'Игрушки', 'Новогодние подарки']
+					li 
+						a(href="#")=item 

@@ -1,0 +1,77 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Single Product of the page'}
+block content_block
+	+bread(['Главная', 'Авторский'], 'Розовое золото')
+	section.flowers_product
+		.section_in
+			.flowers_product--head
+				ul.flowers_rait--list
+					each item in ['star']
+						- for(i = 0; i < 5; i++)
+								li
+									+icon(item, 'flowers_item--icon')
+				.flowers_product--reviews 
+					a(href="#")!='<span>15</span> отзывов' 
+				.flowers_product--width 
+					p!='Размер:<span>40 см * 40см</span>'
+			.flowers_product--main 
+				.flowers_product--gallery
+					.flowers_product--thumb.swiper-container 
+						.swiper-wrapper
+							- for(i = 0; i < 5; i++)
+								.swiper-slide 
+									.flowers_product--icon 
+										img(src="i/about.jpg") 
+					.flowers_product--slider.swiper-container 
+						.swiper-wrapper
+							- for(i = 0; i < 5; i++)
+								.swiper-slide 
+									.flowers_product--img 
+										img(src="i/about.jpg")
+				.flowers_product--content 
+					.flowers_product--allinfo 
+						h1 Букет “Великолепие”
+						p 3 800
+					.flowers_product--button 
+						.flowers_product--link
+							a(href="#") Заказать
+						.flowers_product--like
+							+icon('like')
+					.flowers_product--delivery 
+						span Доставка в г. Ростов-на-дону: Бесплатно
+					.flowers_attr--all 
+						.flowers_attr--name
+							.flowers_attr--img 
+								img(src="i/vector/flowers.svg")
+							p Состав:
+						ul.flowers_product--attr
+							-
+								var attr = [
+									{
+										title: 'Роза Голландская',
+										txt: '5 шт.'
+									},
+								]
+							each item in attr
+								- for(i = 0; i < 5; i++)
+									li 
+										p=item.title 
+										span=item.txt
+	section.flowers_crossel 
+		.section_in 
+			.flowers_crossel--main 
+				h2 C этим товаром так же покупают
+				+productsGrid({
+						classes: 'flowers_crossel--grid',
+						btn: 'Перейти в каталог',
+						class: 'flowers_crossel--btn',
+					})
+			.flowers_crossel--main 
+				h2 Похожие товары
+				+productsGrid({
+						classes: 'flowers_crossel--grid',
+						btn: 'Перейти в каталог',
+						class: 'flowers_crossel--btn',
+					})

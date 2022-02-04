@@ -1,0 +1,18 @@
+section.reviews_blocks 
+  .section_in 
+    .reviews_slider.swiper-container 
+      .swiper-wrapper
+        - for(i = 0; i < 6; ++i)
+          .swiper-slide 
+            .reviews_slide 
+              .reviews_slide--head 
+                p Елена
+              .reviews_slide--txt
+                p Спасибо огромное за ваш труд!! В день рождения так приятно получать подарки и особенно цветы, такие приятные сюрпризы радуют и самое главное, можно порадовать любимых даже находясь не рядом, благодаря вам!!! Спасибо огромное за радостные моменты!!!
+      .reviews_navi 
+        .reviews_nav 
+          .reviews_left 
+            +icon('prev')
+          .reviews_right
+            +icon('next')
+        .reviews_scroll
